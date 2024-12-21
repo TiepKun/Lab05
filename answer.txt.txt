@@ -1,0 +1,35 @@
+- Lập trình với AWT và Swing có nhiều điểm tương đồng vì cả hai đều cung cấp các phần tử giao diện đồ họa (GUI) như container, component và xử lý sự kiện (event-handling). Tuy nhiên, có một số điểm khác biệt quan trọng giữa hai thư viện này cần lưu ý:
+
+1. Các container cấp cao nhất (Top-Level Containers)
+AWT:
+Frame: Là container cấp cao nhất, đại diện cho cửa sổ giao diện chính.
+Dialog: Là hộp thoại, thường dùng để hiển thị thông tin hoặc nhận đầu vào từ người dùng.
+Swing:
+JFrame: Tương tự Frame, nhưng thuộc Swing, hỗ trợ nhiều tính năng hơn như giao diện đẹp hơn (look and feel) và dễ tùy chỉnh.
+JDialog: Tương tự Dialog, nhưng hỗ trợ các tính năng của Swing.
+JApplet: Tương tự Applet trong AWT, nhưng hiện ít được sử dụng do công nghệ applet đã lỗi thời.
+2. Tên lớp của các thành phần trong AWT và tên lớp tương ứng trong Swing
+Thành phần	AWT (java.awt)	Swing (javax.swing)
+Cửa sổ chính	Frame	JFrame
+Hộp thoại	Dialog	JDialog
+Nút bấm	Button	JButton
+Nhãn	Label	JLabel
+Hộp văn bản	TextField	JTextField
+Vùng văn bản	TextArea	JTextArea
+Hộp chọn	Checkbox	JCheckBox
+Danh sách	List	JList
+Menu	Menu	JMenu
+Thanh cuộn	Scrollbar	JScrollBar
+Bảng	Không có	JTable
+3. Một số điểm khác biệt khác giữa AWT và Swing
+Giao diện đồ họa:
+AWT sử dụng các thành phần native của hệ điều hành, nghĩa là nó phụ thuộc vào nền tảng (platform-dependent).
+Swing sử dụng các thành phần không phụ thuộc vào hệ điều hành (platform-independent) nên giao diện nhất quán trên mọi nền tảng.
+Tính năng bổ sung:
+Swing hỗ trợ nhiều thành phần phức tạp hơn như JTree, JTable, JTabbedPane mà AWT không có.
+Hiệu suất:
+AWT nhẹ hơn nhưng thường thiếu các tính năng hiện đại.
+Swing nặng hơn vì phải xử lý giao diện nhiều hơn, nhưng linh hoạt hơn.
+
+
+- Nếu không xử lý các ngoại lệ trong phương thức play(), khi có lỗi xảy ra, chương trình sẽ gặp sự cố và có thể bị dừng hoặc không hoạt động đúng. Ngoại lệ sẽ không được bắt và chương trình sẽ dừng lại hoặc có hành vi không mong muốn. Việc không xử lý các ngoại lệ có thể khiến ứng dụng bị treo hoặc đóng đột ngột.

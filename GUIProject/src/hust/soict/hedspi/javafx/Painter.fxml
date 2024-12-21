@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="1.7976931348623157E308" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hust.soict.hedspi.javafx.PainterController">
+    <!-- Tools Section on the Left -->
+    <left>
+        <TitledPane collapsible="true" expanded="true" text="Tools" BorderPane.alignment="CENTER">
+            <content>
+                <VBox spacing="10.0">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <RadioButton onAction="#changeTool" selected="true" text="Pen">
+                  <toggleGroup>
+                     <ToggleGroup fx:id="tool" />
+                  </toggleGroup></RadioButton>
+                    <RadioButton onAction="#changeTool" text="Eraser" toggleGroup="$tool" />
+                    <Button onAction="#clearButtonPressed" text="Clear" />
+                </VBox>
+            </content>
+        </TitledPane>
+    </left>
+
+    <!-- Drawing Area in the Center -->
+    <center>
+        <Pane fx:id="drawingAreaPane" onMouseDragged="#drawingAreaMouseDragged" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" />
+    </center>
+   <padding>
+      <Insets right="8.0" />
+   </padding>
+</BorderPane>
